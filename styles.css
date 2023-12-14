@@ -1,0 +1,6 @@
+body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(skyblue 20%, transparent 0), radial-gradient(deepskyblue 20%, transparent 0);
+    background-size: 100px 100px;
+    background-position: 0 0, 5px 5px;
+  }
