@@ -1,8 +1,11 @@
+
 body {
     background-color: dodgerblue;
     background-image: radial-gradient(skyblue 20%, transparent 0), radial-gradient(deepskyblue 20%, transparent 0);
     background-size: 100px 100px;
     background-position: 0 0, 5px 5px;
+    margin-top: 10em;
+    color: white;
   }
 
   .header,
@@ -12,8 +15,25 @@ body {
   transition: all 1s ease;
 }
 
+.highlight {
+  color: #ff0000;
+  text-shadow: 5px 5px 5px #000;
+}
+
+p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .content {
   transition-delay: 0.5s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below inline images */
+  margin: 0 auto; /* Center the image */
 }
 
 .loaded .header,
@@ -38,6 +58,60 @@ body {
 }
 
 button {
-  font-size: 14px;
-  margin-top: 20px;
+  color: white;
+  background-color: orange;
+  font-size: 20px;
+  margin-top: 30px;
+  border-radius: 2em;
+  padding: 10px 20px;
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+
+
+/* Responsive  */
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top: 2em;
+  }
 }
