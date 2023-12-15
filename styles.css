@@ -4,3 +4,40 @@ body {
     background-size: 100px 100px;
     background-position: 0 0, 5px 5px;
   }
+
+  .header,
+.content {
+  opacity: 0;
+  transform: translateX(-400px);
+  transition: all 1s ease;
+}
+
+.content {
+  transition-delay: 0.5s;
+}
+
+.loaded .header,
+.loaded .content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* ------ */
+/* make the tutorial look better */
+.content,
+.header {
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+button {
+  font-size: 14px;
+  margin-top: 20px;
+}
